@@ -24,5 +24,6 @@
   "homepage": "https://github.com/nunojardim/studion#readme",
   "devDependencies": {
     "live-server": "^1.2.1"
-  }
+  },
+  "dependencies": {}
 }
