@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+header,
+main,
+footer {
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  /*padding-top: 7.75rem;*/
+}
+
+ul {
+  display: flex; /* deixa tudo numa linha apenas. antigo display:inline */
+  list-style: none;
+  padding-left: 0;
+}
+
+.logo-studion {
+  font-size: 2.375rem;
+  font-weight: 900;
+  line-height: 1ch; /* relativa ao tamanho da altura do glifo zero da fonte */
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.logo-studion a {
+  text-decoration: none;
+  color: white;
+}
+
+.logo-studion__subtitle {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
