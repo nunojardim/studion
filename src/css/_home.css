@@ -1,16 +1,42 @@
-#slider {
+.slider {
   background-color: #000;
   /*  background-image: url('./images/banner.jpg'); 
       background-repeat: no-repeat;
       background-size:cover;
       background-position: center;*/
-
   color: #fff;
 }
 
 .slide {
   position: relative;
   height: calc(97vh - 7.75rem);
+}
+
+.slide__prev-arrow,
+.slide__next-arrow {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 5px solid #fff;
+  border-right: unset;
+  border-bottom: unset;
+  opacity: 0.9;
+}
+
+.slide__prev-arrow {
+  z-index: 1;
+  left: 1rem;
+  transform: rotate(-45deg);
+}
+
+.slide__next-arrow {
+  z-index: 1;
+  right: 1rem;
+  transform: rotate(135deg);
+}
+
+.slide__prev-arrow::before,
+.slide__next-arrow::before {
+  content: "";
 }
 
 .slide__background-image {
