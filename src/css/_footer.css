@@ -6,16 +6,30 @@
 
 .footer__container {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: unset;
+  grid-template-rows: auto;
   align-items: center;
   padding: 5.25rem 0;
 }
 
-.footer .logo-studion {
-  justify-self: start;
-  margin: 0 1rem;
+@media screen and (min-width: 1280px) {
+  .footer__container {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: unset;
+  }
 }
 
+.footer .logo-studion {
+  justify-self: center;
+  margin: 0 1rem 3rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .footer .logo-studion {
+    justify-self: end;
+    margin: 0 1rem 0rem;
+  }
+}
 .logo-studion__subtitle {
   display: block;
 }
@@ -24,9 +38,15 @@
   justify-self: center;
   display: grid;
   place-items: center;
-  grid-template-columns: 10ch auto;
+  grid-template-columns: auto;
   gap: 1.25rem;
   width: 100%;
+}
+
+@media screen and (min-width: 1280px) {
+  .footer__form {
+    grid-template-columns: 10ch auto;
+  }
 }
 
 .footer__form label {
@@ -73,8 +93,16 @@
 }
 
 .footer__social {
-  justify-self: end;
+  justify-self: center;
   color: #fff;
+  margin: 3rem 1rem 0rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .footer__social {
+    justify-self: end;
+    margin: 0rem 1rem 0rem;
+  }
 }
 
 .footer__social a,
