@@ -19,16 +19,47 @@
 }
 
 .navbar__links {
+  display: none;
   justify-self: end;
 }
 
+@media screen and (min-width: 1280px) {
+  .navbar__links {
+    display: flex;
+  }
+}
+
+.navbar__links.active {
+  display: grid;
+  place-items: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 10;
+  width: 100vw;
+  height: 100vw;
+  margin: 0;
+  padding: 3rem 2rem;
+
+  background: #000c;
+}
+
 .navbar__links li {
-  margin-right: 3rem;
-  /* equivalente a 16px que é o valor do root do html default 
+  /*margin-right: 3rem;
+   equivalente a 16px que é o valor do root do html default 
     querendo a fonte com 10px basta dividir 10/16 = 0.625
     */
-  font-size: 0.875rem;
+  font-size: 1.75rem;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 1280px;) {
+  .navbar__links li {
+    margin-right: 3rem;
+    font-size: 0.875rem;
+  }
 }
 
 .navbar__links a {
@@ -43,4 +74,24 @@
 
 .navbar__links a:hover {
   color: var(--color-primary);
+}
+
+.navbar__menu-btn {
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  font-size: 2.4rem;
+  color: #fff;
+  width: fit-content;
+  background: unset;
+  border: unset;
+  justify-self: end;
+  align-self: start;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .navbar__menu-btn {
+    display: none;
+  }
 }
